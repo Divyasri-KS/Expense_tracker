@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>Finance</h2>
+  <a href="index.html">Dashboard</a>
+  <a href="transactions.html">Transactions</a>
+</div>
+
+<div class="main">
+  <h1>Dashboard</h1>
+
+  <div class="cards">
+    <div class="card green">
+      Income
+      <span id="income">0</span>
+    </div>
+
+    <div class="card red">
+      Expense
+      <span id="expense">0</span>
+    </div>
+
+    <div class="card">
+      Savings
+      <span id="savings">0</span>
+    </div>
+  </div>
+
+  <ul id="list"></ul>
+</div>
+
+<!-- FLOAT BUTTON -->
+<button id="addBtn" onclick="openModal()">+</button>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <h3>Add Transaction</h3>
+
+    <input id="desc" placeholder="Description">
+    <input id="amount" type="number" placeholder="Amount">
+
+    <select id="type">
+      <option value="income">Income</option>
+      <option value="expense">Expense</option>
+    </select>
+
+    <button class="add-btn" onclick="addTransaction()">Add</button>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
